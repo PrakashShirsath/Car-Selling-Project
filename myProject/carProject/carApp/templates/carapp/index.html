@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+  <!--? Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!--? Icon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <title>My Project</title>
+</head>
+
+<body>
+
+  <!--? Top Nav 1 Start  -->
+  <div class="container-fluid top-nav1">
+    <div class="row">
+      <div class="col-md left-side">
+        <span><i class="fa-solid fa-envelope"> </i> shirsathprakash45@gmail.com </span>
+        <span><i class="fa-solid fa-phone"> </i> +91 9067143895 </span>
+        <span><i class="fa-solid fa-clock"> </i> Sun-Fri (08AM - 10PM) </span>
+      </div>
+
+      <div class="col-md right-side">
+        <div class="colum1">
+          <a href="{% url 'loginPage' %}"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+          <a href="{% url 'homePage' %}"><i class="fa-solid fa-user"></i>Register</a>
+          <span>Follow Us:</span>
+        </div>
+
+        <div class="colum2">
+          <i class="fa-brands fa-linkedin" style="color: #11c3d0"></i>
+          <i class="fa-brands fa-square-instagram" style="color: rgb(250, 177, 5)"></i>
+          <i class="fa-brands fa-square-github" style="color: #0fc28d"></i>
+          <i class="fa-brands fa-square-whatsapp" style="color: greenyellow"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--? Top Nav 1 End -->
+
+  <!--? Top Nav 2 Start -->
+  <div class="container top-nav2">
+    <div class="row">
+      <div class="col-md display-row">
+        <div class="logo">
+          <img src="{% static 'carImg/logo/logo.png'%}" />
+        </div>
+
+        <div class="main-nav">
+          <a href="">Home</a>
+          <a href="#about">About</a>
+          <a href="">Inventory</a>
+          <a href="">Pages</a>
+          <a href="#clients">Client</a>
+          <a href="">Contact</a>
+        </div>
+
+        <div class="nav2-items">
+          <a href="{% url 'carImage' %}">
+            <button>
+              <i class="fa-solid fa-circle-plus" style="color: #fff"></i>
+              Add Listing
+            </button>
+          </a>
+
+          <a href="{% url 'carImage' %}">
+            <button>
+              <i class="fa-solid fa-cart-shopping" style="color: #fff"></i>
+              Buy Car
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--? Top Nav 2 End -->
+
+  <!--? Home Section Start -->
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active slide1">
+        <div class="name-text">
+          <p class="line1">WELCOM TO MOTOB!</p>
+          <h1>Best Way To Find<br />Your<span>Dream</span>Car</h1>
+          <h6>
+            There are many variations of passages psum orem psum <br />
+            availabel but the majority have suffered alternation <br />
+            in some form by injected humour.
+          </h6>
+          <div class="buttons">
+            <a href="/"><button class="bn30">
+                About More <i class="fa-solid fa-arrow-right"></i></button></a>
+            <a href="/"><button class="bn30">
+                Show More <i class="fa-solid fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+        <div class="col-md carImg1">
+          <img src="{% static 'carImg/home/hero-1.png' %}" class="d-block w-60 img-fluid" alt="..." />
+        </div>
+      </div>
+
+      <div class="carousel-item slide2">
+        <div class="name-text">
+          <p class="line1">WELCOM TO MOTOB!</p>
+          <h1>
+            Best Way To Find <br />
+            Your<span>Dream</span>Car
+          </h1>
+          <h6>
+            There are many variations of passages psum orem psum <br />
+            availabel but the majority have suffered alternation <br />
+            in some form by injected humour.
+          </h6>
+          <div class="buttons">
+            <a href="/"><button class="bn30">
+                About More <i class="fa-solid fa-arrow-right"></i></button></a>
+            <a href="/"><button class="bn30">
+                Show More <i class="fa-solid fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+        <div class="col-md carImg2">
+          <img src="{% static 'carImg/home/hero-2.png' %}" class="d-block w-60 img-fluid" alt="..." />
+        </div>
+      </div>
+
+      <div class="carousel-item slide3">
+        <div class="name-text">
+          <p class="line1">WELCOM TO MOTOB!</p>
+          <h1>Best Way To Find<br />Your<span>Dream</span>Car</h1>
+          <h6>
+            There are many variations of passages psum orem psum <br />
+            availabel but the majority have suffered alternation <br />
+            in some form by injected humour.
+          </h6>
+          <div class="buttons">
+            <a href="/"><button class="bn30">
+                About More <i class="fa-solid fa-arrow-right"></i></button></a>
+            <a href="/"><button class="bn30">
+                Show More <i class="fa-solid fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+        <div class="col-md carImg3">
+          <img src="{% static 'carImg/home/hero-3.png' %}" class="d-block w-60 img-fluid" alt="..." />
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--? Home Section End -->
+
+  <br /><br />
+
+  <!--?  Section 2 Start -->
+  <div class="container section2" id="about">
+    <div class="row">
+      <div class="col-md left-side">
+        <img src="{% static 'carImg/market/01.png'%}" alt="" class="img-fluid" />
+        <div class="small-box">
+          <div class="img">
+            <img src="{% static 'carImg/market/2.jpg'%}" alt="" />
+          </div>
+
+          <div class="slogan">
+            30 Years Of <br />
+            Quality Service.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md right-side">
+        <h5>
+          <i class="fa-solid fa-car" style="color: #ff0000"></i> About Us
+        </h5>
+        <h1>
+          World Largest<span>Car Dealer</span>Marketplace.
+        </h1>
+        <p>
+          There are many variations of passages of lorem ipsum available,but
+          the <br />
+          majority have suffered alteration in some form,by ijected humour.
+        </p>
+        <span id="line3"><i class="fa-regular fa-circle-check" style="color: #ff0000"></i>
+          At vero eos accusamus et iusto odio.</span><br />
+        <span id="line3"><i class="fa-regular fa-circle-check" style="color: #ff0000"></i>
+          Established fact that a reader will be distracted.</span><br />
+        <span id="line3"><i class="fa-regular fa-circle-check" style="color: #ff0000"></i>
+          Sed ut perspiciatis unde iste natus sit.</span>
+        <div class="button">
+          <a class="bn49" href="/">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <!--?  Section 2 End -->
+
+  <!--?  Section 3 Dealers Start -->
+  <div class="container section-3">
+    <div class="row">
+      <span class="heading1"><i class="fa-solid fa-car" style="color: #ff0000"></i> NEW
+        ARRIVALS</span>
+      <span class="heading2">Let's Check Latest <span>Cars</span> </span>
+    </div>
+    <br />
+
+    <div class="row items-row">
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/01.png' %}" alt="" />
+          <div class="listing">25 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/02.png' %}" alt="" />
+          <div class="listing">35 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/03.png' %}" alt="" />
+          <div class="listing">15 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/04.png' %}" alt="" />
+          <div class="listing">20 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- ? Second Row  -->
+    <div class="row items-row">
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/05.png' %}" alt="" />
+          <div class="listing">19 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <br />
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/06.png' %}" alt="" />
+          <div class="listing">61 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/07.png' %}" alt="" />
+          <div class="listing">45 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+
+      <div class="col-md shadow-box">
+        <div class="img-box">
+          <img src="{% static 'carImg/dealer/08.png' %}" alt="" />
+          <div class="listing">28 Listing</div>
+        </div>
+
+        <div class="info-box">
+          <h5>Atomotive Gear</h5>
+          <span><i class="fa-solid fa-location-dot" style="color: #ff0000"></i>
+            25/B Shivaji Nagar, Pune</span><br />
+          <span><i class="fa-solid fa-phone" style="color: #ff0000"></i> +91
+            9022369037</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <!--?  Section 3 Dealers End  -->
+
+  <!--? Section 4 Start -->
+  <div class="container-fluid section-4">
+    <div class="row main-row">
+      <!--? Side Left  *** Row 1 *** -->
+      <div class="col-md">
+        <div class="row">
+          <div class="col-md">
+            <div class="box">
+              <div class="img-num">
+                <img src="{% static 'carImg/quality/1.jpg' %}" alt="" />
+                <h1>01</h1>
+              </div>
+
+              <div class="info">
+                <h5 class="heading">Best Quality Cars</h5>
+                <span class="para">There are many variations of the passages available but the
+                  majority have been suffered fact that reader will be dist
+                  alteration.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md down-box">
+            <div class="box">
+              <div class="img-num">
+                <img src="{% static 'carImg/quality/2.jpg' %}" alt="" />
+                <h1>02</h1>
+              </div>
+
+              <div class="info">
+                <h5 class="heading">Best Quality Cars</h5>
+                <span class="para">There are many variations of the passages available but the
+                  majority have been suffered fact that reader will be dist
+                  alteration.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <!--? *** Row 2 ***  -->
+        <div class="row">
+          <div class="col-md">
+            <div class="box">
+              <div class="img-num">
+                <img src="{% static 'carImg/quality/3.jpg' %}" alt="" />
+                <h1>03</h1>
+              </div>
+
+              <div class="info">
+                <h5 class="heading">Best Quality Cars</h5>
+                <span class="para">There are many variations of the passages available but the
+                  majority have been suffered fact that reader will be dist
+                  alteration.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md down-box">
+            <div class="box">
+              <div class="img-num">
+                <img src="{% static 'carImg/quality/4.jpg' %}" alt="" />
+                <h1>04</h1>
+              </div>
+
+              <div class="info">
+                <h5 class="heading">Best Quality Cars</h5>
+                <span class="para">There are many variations of the passages available but the
+                  majority have been suffered fact that reader will be dist
+                  alteration.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--? Side Right -->
+      <div class="col-md right-side">
+        <div class="row">
+          <div class="col-md">
+            <h5><i class="fa-solid fa-car" style="color: white"></i>
+              WHY CHOOSE US</h5>
+            <h1>We Are Dedicted<span>To Provide</span>Quality Service</h1>
+            <br>
+            <p>
+              There are many variations of passages available but the majority
+              have suffered alteration in some form going to use a passages by
+              injected humour randomised words which don't look even slightly
+              believable.
+            </p>
+
+            <div class="img">
+              <img src="{% static 'carImg/quality/car.png' %}" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <!--? Section 4 End -->
+
+  <!--? Section 5  Start -->
+  <div class="container section-5" id="clients">
+    <div class="row">
+      <span class="heading1">
+        <i class="fa-solid fa-car" style="color: #ff0000"></i>
+        TESTIMONIALS</span>
+      <span class="heading2">What Our Client<span>Say's</span> </span>
+    </div>
+    <br>
+
+    <div class="row row-gap">
+      <div class="col-md client-box">
+        <img src="{% static 'carImg/client/05.jpg' %}" alt="">
+        <h5>Heruli Nez</h5>
+        <span>Customer</span>
+        <p>There are many variations of the passages available but the
+          majority have been suffered to the alteration in some injected.</p>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+
+      <div class="col-md client-box">
+        <img src="{% static 'carImg/client/04.jpg' %}" alt="">
+        <h5>Sylvia H Green</h5>
+        <span>Customer</span>
+        <p>There are many variations of the passages available but the
+          majority have been suffered to the alteration in some injected.</p>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+
+      <div class="col-md client-box">
+        <img src="{% static 'carImg/client/03.jpg' %}" alt="">
+        <h5>Gordo Novak</h5>
+        <span>Customer</span>
+        <p>There are many variations of the passages available but the
+          majority have been suffered to the alteration in some injected.</p>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+
+      <div class="col-md client-box">
+        <img src="{% static 'carImg/client/02.jpg' %}" alt="">
+        <h5>Reid E Butt</h5>
+        <span>Customer</span>
+        <p>There are many variations of the passages available but the
+          majority have been suffered to the alteration in some injected.</p>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <!--? Section 5 End -->
+</body>
+
+</html>

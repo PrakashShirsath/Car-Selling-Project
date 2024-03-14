@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="{% static 'carstyle.css' %}" />
+	
+	<!--? Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+
+	<!--? Icon cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	<title>car Image</title>
+</head>
+
+<body>
+
+	<!--? Top Nav 1 Start  -->
+	<div class="container-fluid top-nav1">
+		<div class="row">
+		  <div class="col-md left-side">
+			<span><i class="fa-solid fa-envelope"> </i> info@example.com </span>
+			<span><i class="fa-solid fa-phone"> </i> +91 9067143895 </span>
+			<span><i class="fa-solid fa-clock"> </i> Sun-Fri (08AM - 10PM) </span>
+		  </div>
+	
+		  <div class="col-md right-side">
+			<div class="colum1">
+			  <a href="{% url 'loginPage' %}"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+			  <a href="{% url 'homePage' %}"><i class="fa-solid fa-user"></i>Register</a>
+			  <span>Follow Us:</span>
+			</div>
+	
+			<div class="colum2">
+			  <i class="fa-brands fa-linkedin" style="color: #11c3d0"></i>
+			  <i class="fa-brands fa-square-instagram" style="color: rgb(250, 177, 5)"></i>
+			  <i class="fa-brands fa-square-github" style="color: #0fc28d"></i>
+			  <i class="fa-brands fa-square-whatsapp" style="color: greenyellow"></i>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <!--? Top Nav 1 End -->
+
+	  <br><br>
+
+	<!--? section 1 start -->
+	<div class="container carSlot">
+		<div class="row">
+			<span class="heading1"><i class="fa-solid fa-car" style="color: #ff0000"></i> NEW
+				ARRIVALS</span>
+			<span class="heading2">Let's Check Latest <span>Cars</span> </span>
+		</div>
+	
+		{% for myimg in carCollection %} <br>
+			<div class="row full-box">
+				<div class="col-md img-box">
+					<img src="{{myimg.imgPick.url}}" alt="" class="img-fluid user-image">
+				</div>
+
+				<div class="col-md caritem-side">
+					<p class="img-head"> {{myimg.imgName}} </p>
+					<hr class="line1">
+
+					<div class="row1">
+						<span class=""><i class="fa-solid fa-chalkboard-user"></i>
+							{{ myimg.imgMode }}
+						 </span>
+						<span class=""><i class="fa-solid fa-calendar-days"></i>
+							{{ myimg.imgModel }} 
+						</span>
+					</div>
+
+					<div class="row1">
+						<span class=""><i class="fa-solid fa-gas-pump"></i>
+							{{ myimg.imgVariant }} 
+						</span>
+						<span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>
+							{{ myimg.imgPrice }} 
+						</span>
+					</div>
+
+					<div class="row1">
+						<span>Rating :
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+						</span>
+					</div>
+
+					<!--? Button -->
+					<div class="button">
+						
+						<a href="{% url 'sendEmail' %}"><button class="bn3">Order Now</button></a>
+					</div>
+
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<!--? section 1 End -->
+
+</body>
+
+</html>

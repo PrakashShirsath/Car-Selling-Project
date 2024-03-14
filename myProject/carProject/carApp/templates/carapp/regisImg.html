@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Image Registration</title>
+    
+    <!--? Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyA8LCkYiIBcDAp6k2El4nK5tqUJw7b1C"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: red;
+			font-size: 2rem;
+        }
+
+        label {
+            color: black;
+			font-weight: 600;
+			font-size: larger;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+			border-color: red;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, red, brown );
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+			font-weight: 600;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #0056b3, #003366);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Car Image Registration</h2>
+        <form action="{% url 'registerImage' %}" method="POST" enctype="multipart/form-data">
+            <label for="name">Image Name:</label>
+            <input type="text" placeholder="Enter image name" name="imgname">
+
+            <label for="mode">Image Mode:</label>
+            <input type="text" placeholder="Enter image mode" name="imgmode">
+
+            <label for="model">Image Model:</label>
+            <input type="number" placeholder="Enter image model" name="imgmodel">
+
+            <label for="variant">Image Variant:</label>
+            <input type="text" placeholder="Enter image variant" name="imgvariant">
+
+            <label for="price">Image Price:</label>
+            <input type="number" placeholder="Enter image price" name="imgprice">
+
+            <label for="image">Image:</label>
+            <input type="file" name="imgpick">
+
+            {% csrf_token %}
+            <input type="submit" value="Submit Data">
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js CDN -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-eMNCO8NJzfnFO9gybBcAVbPElZXJQu4jz1vPqeDIl5UDtLvDww9CC8tlMH8S82fA"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyA8LCkYiIBcDAp6k2El4nK5tqUJw7b1C"
+        crossorigin="anonymous"></script> 
+</body>
+
+</html>
